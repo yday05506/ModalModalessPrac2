@@ -16,7 +16,7 @@ namespace ModalModalessPrac2
         public Form1()
         {
             InitializeComponent();
-            IsMdiContainer = true;
+            // IsMdiContainer = true;
         }
 
         #region Windows Form 디자이너에서 생성한 코드
@@ -53,8 +53,15 @@ namespace ModalModalessPrac2
         private void Button2_Click(object sender, EventArgs e)
         {
             CustomForm form = new CustomForm();
-            form.MdiParent = this;
+            // form.MdiParent = this;
             form.Show();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            // form.MdiParent = this;
+            form.ShowDialog();
         }
     }
 }
