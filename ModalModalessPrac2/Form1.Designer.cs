@@ -3,8 +3,16 @@ using System.Windows.Forms;
 
 namespace ModalModalessPrac2
 {
-    partial class Form1
+    partial class Form1 : Form
     {
+        class CustomForm : Form
+        {
+            public CustomForm()
+            {
+                Text = "제목 글자";
+            }
+        }
+
         /// <summary>
         /// 필수 디자이너 변수입니다.
         /// </summary>
@@ -52,6 +60,12 @@ namespace ModalModalessPrac2
             {
                 MessageBox.Show("사용자가 취소하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            CustomForm form = new CustomForm();
+            form.Show();
         }
     }
 }
